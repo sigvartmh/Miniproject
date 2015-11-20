@@ -12,6 +12,8 @@ We decided to use a PID controller with a KD factor of 1 and since the noise fro
 
 ![/assignment1/plot4_10000samples.png](plot/assignment1/plot4_10000samples.png)
 
+<img src="https://github.com/sigvartmh/Miniproject/blob/master/plot/assaignment1/plot4_10000samples.png" alt="10000samples assignment1" > 
+
 As you can see from the plots the maximum time it takes for a get respons is around 2000 us.
 
 ![plot/assignment1/plot4.png](plot/assignment1/plot4.png)
@@ -51,6 +53,7 @@ switching overhead and reduced the use of memcpy on the buffer.
 ####Effect of signal on regulator
 Without signal:
 ![(plot5_nosignal.png)l](plot5_nosignal.png)
+
 
 With signal:
 ![(plot5_withsignal.png)](plot5_withsignal.png)
