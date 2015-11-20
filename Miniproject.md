@@ -1,4 +1,11 @@
-#Miniproject
+# Miniproject
+TL;DR:
+* Semaphores for signaling events
+* Mutexes for protecting globalvariables/datastructures
+* Delay in UPDlistner for freeing up CPU time(removed)
+* Period found with same method as in  Assignment 1.
+* No Deadlines missed
+* Few oscillations and small overshoot but more than Assignment 1. 
 
 ### Assignment 1:
 
@@ -81,10 +88,3 @@ Also worth mentioning is that the measurements were not done in the sanntidslab 
 
 <img src="https://github.com/sigvartmh/Miniproject/blob/master/plot/setup.jpg" alt="the setup" > 
 
-TL;DR:
-* Semaphores for signaling events
-* Mutexes for protecting globalvariables/datastructures
-* Delay in UPDlistner for freeing up CPU time(removed)
-* Period found with same method as in  Assignment 1.
-* No Deadlines missed
-* Few oscillations and small overshoot but more than Assignment 1. 
