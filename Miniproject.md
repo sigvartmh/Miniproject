@@ -10,13 +10,11 @@ Instead we took the data produced by the example server in the pid_time.dat from
 
 We decided to use a PID controller with a KD factor of 1 and since the noise from the system were constantly 3 and the reference we set were 1.  We sat the initial error to be -2.0. We could  have tried to measure the time  it took for the pid calculation and removed it from the delay but we decided that the response of the system was allready good enough.
 
-![/assignment1/plot4_10000samples.png](plot/assignment1/plot4_10000samples.png)
-
 <img src="https://github.com/sigvartmh/Miniproject/blob/master/plot/assaignment1/plot4_10000samples.png" alt="10000samples assignment1" > 
 
 As you can see from the plots the maximum time it takes for a get respons is around 2000 us.
 
-![plot/assignment1/plot4.png](plot/assignment1/plot4.png)
+<img src="https://github.com/sigvartmh/Miniproject/blob/master/plot/assaignment1/plot4.png" alt="assignment1 plot" > 
 
 Here you can see that none of the deadlines are missed as the controller step time from `GET` is always lower or on  pair with the period time between the `GET` responses. 
 
@@ -52,11 +50,10 @@ switching overhead and reduced the use of memcpy on the buffer.
 
 ####Effect of signal on regulator
 Without signal:
-![(plot5_nosignal.png)l](plot5_nosignal.png)
-
+<img src="https://github.com/sigvartmh/Miniproject/blob/master/plot/plot5_withoutsignal.png" alt="assignment2 plot no signal respons" > 
 
 With signal:
-![(plot5_withsignal.png)](plot5_withsignal.png)
+<img src="https://github.com/sigvartmh/Miniproject/blob/master/plot/plot5_withsignal.png" alt="assignment2 plot signal respons" > 
 
 As you can see the effect of the signal on the regulator is controler step time goes over the period set for the get request period. This is due to the PID task or other task being  interupted so that the signaling task is using some of the cpu time making it so the PID does not reach its deadline. As the GET period gets more spread.
 
