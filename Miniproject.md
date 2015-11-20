@@ -50,14 +50,20 @@ switching overhead and reduced the use of memcpy on the buffer.
 
 ####Effect of signal on regulator
 Without signal:
+<img src="https://github.com/sigvartmh/Miniproject/blob/master/plot/plot5_withoutsignal2000us.png" alt="assignment2 plot no signal respons" > 
+
+With signal:
+<img src="https://github.com/sigvartmh/Miniproject/blob/master/plot/plot5_withsignal2000us.png" alt="assignment2 plot signal respons" > 
+
+As you can see the effect of the signal on the regulator is controler step time goes over the period set for the get request period. This is due to the PID task or other task being  interupted so that the signaling task is using some of the cpu time making it so the PID does not reach its deadline. As the GET period gets more spread. Unfortunatly this is not shown in the plots as the period is set to 4000us.
+
+Therfor to get a response we had to increase the period to 4000us which we found using the same method as in Assignment 1 where we took 10000 samples and found the max from the pid_data.dat.
+######4000us
+Without signal:
 <img src="https://github.com/sigvartmh/Miniproject/blob/master/plot/plot5_withoutsignal.png" alt="assignment2 plot no signal respons" > 
 
 With signal:
 <img src="https://github.com/sigvartmh/Miniproject/blob/master/plot/plot5_withsignal.png" alt="assignment2 plot signal respons" > 
-
-As you can see the effect of the signal on the regulator is controler step time goes over the period set for the get request period. This is due to the PID task or other task being  interupted so that the signaling task is using some of the cpu time making it so the PID does not reach its deadline. As the GET period gets more spread.
-
-Therfor to get a response we had to increase the period to 4000us which we found using the same method as in Assignment 1 where we took 10000 samples and found the max from the pid_data.dat.
 
 As  you can see from this plot no deadlines are missed as the period time is always higher or  on pair  with the controller step time. This results is not always stable, due to linux system task running in the background both on the server and  hostcard. Therefor the conclusion is that the program if  possible should be run with system priority and with a RT hardened kernel or RT API like Xiaomi.  
 
